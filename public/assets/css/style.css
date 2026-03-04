@@ -8,7 +8,11 @@
     --gray-dark: #1F1F1F;
 }
 
+html,
 body {
+    overflow-x: hidden;
+    width: 100%;
+    position: relative;
     font-family: 'Inter', sans-serif;
     scroll-behavior: smooth;
     background-color: var(--primary-white);
