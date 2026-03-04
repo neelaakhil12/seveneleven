@@ -28,22 +28,20 @@
 
 <body class="bg-white text-industrial-black pt-20">
 
-    <!-- Sticky Navbar -->
-    <nav class="fixed w-full z-50 bg-white shadow-md glass-nav transition-all duration-300" id="navbar">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between py-2 sm:py-3 transition-all duration-300" id="nav-inner">
-                <div class="flex-shrink-0 flex items-center">
-                    <a href="index.html" class="flex items-center gap-4">
-                        <img src="assets/images/logo.png" alt="Seven Eleven Technologies Logo"
-                            class="h-10 sm:h-12 w-auto transition-all duration-300" id="nav-logo">
-                        <div class="flex flex-col leading-none">
-                            <span class="text-base sm:text-xl font-black text-industrial-black tracking-tighter">SEVEN
-                                ELEVEN</span>
-                            <span
-                                class="text-[10px] sm:text-sm font-bold text-industrial-orange tracking-[0.2em] uppercase">Technologies</span>
-                        </div>
-                    </a>
-                </div>
+    <!-- Navbar -->
+    <nav class="fixed top-0 w-full z-50 glass-nav transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex items-center justify-between py-4 transition-all duration-300" id="nav-inner">
+                <a href="index.html" class="flex items-center gap-4">
+                    <img src="assets/images/logo.png" alt="Seven Eleven Technologies Logo"
+                        class="h-12 sm:h-16 w-auto transition-all duration-300" id="nav-logo">
+                    <div class="flex flex-col leading-none">
+                        <span class="text-base sm:text-xl font-black text-industrial-black tracking-tighter">SEVEN
+                            ELEVEN</span>
+                        <span
+                            class="text-[10px] sm:text-sm font-bold text-industrial-orange tracking-[0.2em] uppercase">Technologies</span>
+                    </div>
+                </a>
                 <div class="hidden md:flex space-x-8">
                     <a href="index.html"
                         class="text-industrial-black hover:text-industrial-orange px-3 py-2 text-sm font-medium uppercase transition-colors border-b-2 border-transparent hover:border-industrial-orange">Home</a>
@@ -308,13 +306,24 @@
             mobileMenu.classList.toggle('hidden');
         });
 
-        // Navbar Constant (No resizing on scroll)
+        // Navbar Scroll Effect
         window.addEventListener('scroll', () => {
-            const navbar = document.getElementById('navbar');
-            if (window.scrollY > 10) {
-                navbar.classList.add('shadow-md');
+            const navbar = document.querySelector('nav');
+            const navInner = document.getElementById('nav-inner');
+            const navLogo = document.getElementById('nav-logo');
+
+            if (window.scrollY > 50) {
+                navbar.classList.add('bg-white', 'shadow-md');
+                navInner.classList.remove('py-4');
+                navInner.classList.add('py-2');
+                navLogo.classList.remove('h-12', 'sm:h-16');
+                navLogo.classList.add('h-10', 'sm:h-12');
             } else {
-                navbar.classList.add('shadow-md');
+                navbar.classList.remove('bg-white', 'shadow-md');
+                navInner.classList.add('py-4');
+                navInner.classList.remove('py-2');
+                navLogo.classList.add('h-12', 'sm:h-16');
+                navLogo.classList.remove('h-10', 'sm:h-12');
             }
         });
     </script>
