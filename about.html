@@ -57,6 +57,34 @@
                     class="bg-industrial-orange text-white px-5 py-2 rounded-sm text-sm font-bold uppercase hover:bg-industrial-black hover:text-white transition-all">Contact
                     Us</a>
             </div>
+            <!-- Mobile Menu Button -->
+            <div class="md:hidden flex items-center">
+                <button id="mobile-menu-button" class="text-industrial-black focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu"
+            class="hidden md:hidden bg-white border-t border-gray-100 shadow-xl overflow-y-auto max-h-[calc(100vh-80px)]">
+            <div class="px-4 py-6 space-y-2">
+                <a href="index.html"
+                    class="block text-industrial-black hover:text-industrial-orange px-3 py-4 text-lg font-medium uppercase transition-colors">Home</a>
+                <a href="services.html"
+                    class="block text-industrial-black hover:text-industrial-orange px-3 py-4 text-lg font-medium uppercase transition-colors">Services</a>
+                <a href="products.html"
+                    class="block text-industrial-black hover:text-industrial-orange px-3 py-4 text-lg font-medium uppercase transition-colors">Our
+                    Products</a>
+                <a href="clients.html"
+                    class="block text-industrial-black hover:text-industrial-orange px-3 py-4 text-lg font-medium uppercase transition-colors">Our
+                    Clients</a>
+                <a href="about.html"
+                    class="block text-industrial-orange px-3 py-4 text-lg font-bold uppercase border-l-4 border-industrial-orange bg-orange-50">About
+                    Us</a>
+                <a href="contact.html"
+                    class="block bg-industrial-orange text-white px-3 py-4 text-lg font-bold uppercase text-center rounded-sm mt-4">Contact
+                    Us</a>
+            </div>
         </div>
     </nav>
 
@@ -200,9 +228,10 @@
                     <a href="index.html" class="flex items-center gap-4">
                         <img src="assets/images/logo.png" alt="Seven Eleven Technologies Logo" class="h-16 w-auto">
                         <div class="flex flex-col leading-none">
-                            <span class="text-xl font-black text-industrial-black tracking-tighter">SEVEN ELEVEN</span>
+                            <span class="text-base sm:text-xl font-black text-industrial-black tracking-tighter">SEVEN
+                                ELEVEN</span>
                             <span
-                                class="text-sm font-bold text-industrial-orange tracking-[0.2em] uppercase">Technologies</span>
+                                class="text-[10px] sm:text-sm font-bold text-industrial-orange tracking-[0.2em] uppercase">Technologies</span>
                         </div>
                     </a>
                     <p class="mt-6 text-gray-600 max-w-md">
@@ -281,11 +310,11 @@
 
     <!-- Floating WhatsApp Button -->
     <a href="https://wa.me/919885292147" target="_blank"
-        class="fixed bottom-8 right-8 z-[999] bg-[#25D366] text-white w-16 h-16 rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-transform duration-300 group"
+        class="fixed bottom-6 right-6 sm:bottom-8 sm:right-8 z-[999] bg-[#25D366] text-white w-14 h-14 sm:w-16 sm:h-16 rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-transform duration-300 group"
         aria-label="Chat on WhatsApp">
-        <i class="fab fa-whatsapp text-4xl"></i>
+        <i class="fab fa-whatsapp text-3xl sm:text-4xl"></i>
         <span
-            class="absolute right-full mr-4 bg-industrial-black text-white px-4 py-2 rounded-sm text-sm font-bold opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap pointer-events-none">
+            class="hidden sm:block absolute right-full mr-4 bg-industrial-black text-white px-4 py-2 rounded-sm text-sm font-bold opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap pointer-events-none">
             Chat with us!
         </span>
     </a>
