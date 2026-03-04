@@ -274,6 +274,14 @@
                 navbar.style.background = 'rgba(255, 255, 255, 0.9)';
             }
         });
+
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
     </script>
 
     <!-- Floating WhatsApp Button -->
